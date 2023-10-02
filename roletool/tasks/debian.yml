@@ -16,3 +16,7 @@
   apt:
     name: scylla
     state: present
+- name: Start ScyllaDB Service
+  systemd:
+     name: scylla-server
+     state: started
