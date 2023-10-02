@@ -17,7 +17,7 @@
     group: root
     mode: '0644'
   with_items: "{{ templs }}"
-#   notify: Restart Elasticsearch
+  notify: Restart scylla
 
 
 
