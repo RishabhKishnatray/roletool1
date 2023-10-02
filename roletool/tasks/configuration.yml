@@ -1,12 +1,13 @@
 ---
 - name: Configure Elasticsearch service
   template:
-    src: elasticsearch.yml.j2
-    dest: "{{ item }}"  #/etc/elasticsearch/elasticsearch.yml
-    owner: elasticsearch
-    group: elasticsearch
+    src: "{{ item.1 }}"
+    dest: "{{ item.0 }}/{{ item.1 }}"  #/etc/elasticsearch/elasticsearch.yml
+    owner: root
+    group: root
     mode: '0644'
-  with_items: "{{ templ }}"
+  with_items: "{{ templl }}"
+  with_items: "{{ templl1 }}"
   # notify: Restart Elasticsearch
 
 - name: Configure Elastic jvm
@@ -15,7 +16,7 @@
     dest: "{{ item }}"  
     owner: elasticsearch
     group: elasticsearch
-    mode: '0646'
+    mode: '0644'
   with_items: "{{ templs }}"
   notify: Restart Elasticsearch
 

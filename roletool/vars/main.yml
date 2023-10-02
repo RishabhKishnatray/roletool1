@@ -1,14 +1,13 @@
 ---
 jdkversion:
   - openjdk-8-jre-headless
-#repo: "sudo gpg --homedir /tmp --no-default-keyring --keyring /etc/apt/keyrings/scylladb.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys d0a112e067426ab2"
-#archive.key: "sudo wget -O /etc/apt/sources.list.d/scylla.list http://downloads.scylladb.com/deb/debian/scylla-5.2.list"
-
-scylla_gpg: "gpg --homedir /tmp --no-default-keyring --keyring /etc/apt/keyrings/scylladb.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys d0a112e067426ab2"
-#scylla_repo: "wget -O /etc/apt/sources.list.d/scylla.list http://downloads.scylladb.com/deb/debian/scylla-5.2.list"
 scylla_repo: "http://downloads.scylladb.com/deb/debian/scylla-5.2.list"
+scylla_gpg: "gpg --homedir /tmp --no-default-keyring --keyring /etc/apt/keyrings/scylladb.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys d0a112e067426ab2"
 scylla_repo_dest: "/etc/apt/sources.list.d/scylla.list"
-
 templ:
     - /etc/apt/keyrings
     - /etc/scylla/cassandra
+#repo: "sudo gpg --homedir /tmp --no-default-keyring --keyring /etc/apt/keyrings/scylladb.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys d0a112e067426ab2"
+#archive.key: "sudo wget -O /etc/apt/sources.list.d/scylla.list http://downloads.scylladb.com/deb/debian/scylla-5.2.list"
+
+#scylla_repo: "wget -O /etc/apt/sources.list.d/scylla.list http://downloads.scylladb.com/deb/debian/scylla-5.2.list"
