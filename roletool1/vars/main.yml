@@ -1,0 +1,5 @@
+---
+jdkversion:
+  - openjdk-8-jre-headless
+repo: deb http://downloads.scylladb.com/deb/ubuntu scylla main  
+archive.key: https://downloads.scylladb.com/rpm/debian/archive.key

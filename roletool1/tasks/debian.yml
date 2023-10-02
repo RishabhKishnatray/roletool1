@@ -1,0 +1,33 @@
+ ---
+
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: /etc/apt/keyrings
+    state: directory
+    mode: '0777'
+    owner: root
+    group: root
+
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Add ScyllaDB GPG key
+   shell: "{{ archive.key }}" 
+     
+
+- name: Add ScyllaDB repository
+   shell: "{{ repo }}"
+
+
+# - name: Install ScyllaDB
+#   apt:
+#     name: scylla
+#     state: present
+#   notify: Start ScyllaDB
+
+# - name: Start ScyllaDB
+#   systemd:
+#     name: scylla-server
+#     enabled: yes
+#     state: started
