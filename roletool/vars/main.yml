@@ -11,3 +11,7 @@ templ:
 #archive.key: "sudo wget -O /etc/apt/sources.list.d/scylla.list http://downloads.scylladb.com/deb/debian/scylla-5.2.list"
 
 #scylla_repo: "wget -O /etc/apt/sources.list.d/scylla.list http://downloads.scylladb.com/deb/debian/scylla-5.2.list"
+templl:
+  - scylla.yml.j2
+  - cassandra-rackdc.properties.j2
+
