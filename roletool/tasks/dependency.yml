@@ -5,13 +5,10 @@
 
 - name: directory
   file:
-  become: true
     path: "{{ item }}"
     state: directory
     mode: "0777"
-  loop:
-    - /etc/apt/keyrings
-    - /etc/scylla/cassandra
+  with_items: "{{ templ }}"
 
 - name: install java
   apt:
