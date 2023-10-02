@@ -21,10 +21,10 @@
   apt:
     name: scylla
     state: present
-- name: Start ScyllaDB Service
-  systemd:
-     name: scylla-server
-     state: started
-- name: Wait for 1 minutes
+# - name: Start ScyllaDB Service
+#   systemd:
+#      name: scylla-server
+#      state: started
+- name: Wait for seconds
   pause:
-    minutes: 1
+    seconds: 20
