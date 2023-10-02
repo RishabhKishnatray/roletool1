@@ -1,12 +1,4 @@
 ---
-
-- name: directory
-  file:
-    path: /etc/apt/keyrings
-    state: directory
-    mode: "0777"
-  become: true
-
 - name: Update apt cache
   apt:
     update_cache: yes
