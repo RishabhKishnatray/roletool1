@@ -12,7 +12,7 @@
 - name: Configure scylla cassandra
   template:
     src: "{{ item }}"
-    dest:   
+    dest: /etc/scylla/cassandra
     owner: root
     group: root
     mode: '0644'
