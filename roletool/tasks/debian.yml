@@ -12,6 +12,11 @@
     url: "{{ scylla_repo }}"
     dest: "{{ scylla_repo_dest }}"
   become: yes
+
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
 - name: Install scylla
   apt:
     name: scylla
