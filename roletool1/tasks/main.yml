@@ -1,0 +1,8 @@
+---
+
+- name: dependency & packages
+  import_tasks: dependency.yml
+  # when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'Debian'
+
+- name: Install Elasticsearch on Debian/Ubuntu
+  include_tasks: debian.yml
