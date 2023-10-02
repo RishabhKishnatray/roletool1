@@ -1,22 +1,22 @@
 ---
-- name: Configure Elasticsearch service
+- name: Configure service
   template:
     src: "{{ item }}"
     dest: /etc/scylla  #/etc/elasticsearch/elasticsearch.yml
     owner: root
     group: root
     mode: '0644'
-  with_items: "{{ templl }}""
+  with_items: "{{ templl }}"
   # notify: Restart Elasticsearch
 
-# - name: Configure Elastic jvm
-#   template:
-#     src: jvm.options.j2
-#     dest: "{{ item }}"  
-#     owner: elasticsearch
-#     group: elasticsearch
-#     mode: '0644'
-#   with_items: "{{ templs }}"
+- name: Configure scylla cassandra
+  template:
+    src: "{{ item }}"
+    dest:   
+    owner: root
+    group: root
+    mode: '0644'
+  with_items: "{{ templs }}"
 #   notify: Restart Elasticsearch
 
 
