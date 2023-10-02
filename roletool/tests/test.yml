@@ -1,5 +1,5 @@
 ---
-- hosts: web01
+- hosts: localhost
   become: true
   roles:
     - roletool

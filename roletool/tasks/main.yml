@@ -1,0 +1,5 @@
+---
+- name: dependecy
+  import_tasks: dependency.yml
+- name: Install on Debian/Ubuntu
+  import_tasks: debian.yml
