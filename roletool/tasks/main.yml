@@ -2,6 +2,8 @@
 - name: dependecy
   import_tasks: dependency.yml
 - name: Install on Debian/Ubuntu
-  import_tasks: debian.yml
+  import_tasks: configuration.yml
 - name: Install on Debian/Ubuntu
+  import_tasks: debian.yml
+- name: Install 
   import_tasks: configuration.yml
