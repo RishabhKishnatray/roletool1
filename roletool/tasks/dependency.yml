@@ -3,19 +3,16 @@
   apt:
     update_cache: yes
 
-- name: Create a directory if it does not exist
-  ansible.builtin.file:
-    path: /etc/apt/keyrings
-    owner: root
+- name: directory
+  file:
+  become: true
+    path: "{{ item }}"
     state: directory
-    mode: '0777'
+    mode: "0777"
+  loop:
+    - /etc/apt/keyrings
+    - /etc/scylla/cassandra
 
 - name: install java
   apt:
     name: "{{ jdkversion }}"
-
-
-
-
-
-
