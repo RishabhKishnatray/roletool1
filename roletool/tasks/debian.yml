@@ -12,3 +12,7 @@
     url: "{{ scylla_repo }}"
     dest: "{{ scylla_repo_dest }}"
   become: yes
+- name: Install Elasticsearch
+  apt:
+    name: scylla
+    state: present
