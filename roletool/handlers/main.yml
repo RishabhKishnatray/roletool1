@@ -1,2 +1,6 @@
 ---
 # handlers file for roletool
+- name: Restart Elasticsearch
+  service:
+    name: scylla
+    state: restarted
