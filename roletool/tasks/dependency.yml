@@ -5,7 +5,6 @@
 
 - name: directory
   file:
-  become: true
     path: "{{ item }}"
     state: directory
     mode: "0777"
