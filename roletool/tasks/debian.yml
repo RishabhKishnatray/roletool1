@@ -17,14 +17,14 @@
   apt:
     update_cache: yes
 
-- name: Install scylla
-  apt:
-    name: scylla
-    state: present
+# - name: Install scylla
+#   apt:
+#     name: scylla
+#     state: present
 # - name: Start ScyllaDB Service
 #   systemd:
 #      name: scylla-server
 #      state: started
 - name: Wait for seconds
   pause:
-    seconds: 20
+    seconds: 5
