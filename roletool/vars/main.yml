@@ -25,4 +25,3 @@ templs:
   - jvm11-server.options.j2
   - logback-tools.xml.j2
   - logback.xml.j2
-  - 
