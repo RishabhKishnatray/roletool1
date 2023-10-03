@@ -9,15 +9,15 @@
   with_items: "{{ templl }}"
   # notify: Restart Elasticsearch
 
-- name: Configure scylla cassandra
-  template:
-    src: "{{ item }}"
-    dest: /etc/scylla/cassandra
-    owner: root
-    group: root
-    mode: '0644'
-  with_items: "{{ templs }}"
-  notify: Restart scylla
+# - name: Configure scylla cassandra
+#   template:
+#     src: "{{ item }}"
+#     dest: /etc/scylla/cassandra
+#     owner: root
+#     group: root
+#     mode: '0644'
+#   with_items: "{{ templs }}"
+#   notify: Restart scylla
 
 
 
