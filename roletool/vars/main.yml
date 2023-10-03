@@ -15,13 +15,13 @@ templl:
   - scylla.yml.j2
   - cassandra-rackdc.properties.j2
 
-templs:
-  - cassandra-env.sh.j2
-  - jvm-clients.options.j2
-  - jvm-server.options.j2
-  - jvm8-clients.options.j2
-  - jvm8-server.options.j2
-  - jvm11-clients.options.j2
-  - jvm11-server.options.j2
-  - logback-tools.xml.j2
-  - logback.xml.j2
+# templs:
+#   - cassandra-env.sh.j2
+#   - jvm-clients.options.j2
+#   - jvm-server.options.j2
+#   - jvm8-clients.options.j2
+#   - jvm8-server.options.j2
+#   - jvm11-clients.options.j2
+#   - jvm11-server.options.j2
+#   - logback-tools.xml.j2
+#   - logback.xml.j2
