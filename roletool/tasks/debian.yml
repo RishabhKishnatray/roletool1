@@ -13,15 +13,22 @@
     state: present
 
 
-# - name: Add ScyllaDB Repository
-#   get_url:
-#     url: "{{ scylla_repo }}"
-#     dest: "{{ scylla_repo_dest }}"
-#   become: yes
+- name: Add ScyllaDB Repository
+  get_url:
+    url: "{{ scylla_repo }}"
+    dest: "{{ scylla_repo_dest }}"
+  become: yes
 
 - name: Update apt cache
   apt:
     update_cache: yes
+
+- name: Enable ScyllaDB Server service
+  systemd:
+    name: scylla-server
+    enabled: yes
+  notify:
+    - Reload systemd
 
 # - name: Install scylla
 #   apt:
