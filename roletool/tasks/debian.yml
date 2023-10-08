@@ -11,6 +11,7 @@
   apt_repository:
     repo: "{{ scylla_repo }}"
     state: present
+  become: yes
 
 
 # - name: Add ScyllaDB Repository
