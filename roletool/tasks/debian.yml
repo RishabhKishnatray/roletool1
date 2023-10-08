@@ -7,13 +7,6 @@
   command: "{{ scylla_gpg }}"
   become: yes
 
-- name: Add Elasticsearch repository
-  apt_repository:
-    repo: "{{ scylla_repo }}"
-    state: present
-  become: yes
-
-
 - name: Add ScyllaDB Repository
   get_url:
     url: "{{ scylla_repo }}"
@@ -23,6 +16,11 @@
 - name: Update apt cache
   apt:
     update_cache: yes
+
+- name: Install scylla
+  apt:
+    name: scylla
+    state: present
 
 - name: Enable ScyllaDB Server service
   systemd:
