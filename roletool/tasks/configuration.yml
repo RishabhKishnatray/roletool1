@@ -6,7 +6,6 @@
     owner: ubuntu
     group: ubuntu
     mode: '0644'
-  remote_src: true
   become: true
 #  remote_src: true
 #    mode: '0644'
