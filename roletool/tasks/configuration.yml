@@ -1,7 +1,7 @@
 ---
 - name: Configure service1
   template:
-    src: /home/ubuntu/roletool1/roletool/templates/scylla.yaml.j2
+    src: scylla.yaml.j2
     dest: /etc/scylla/scylla.yaml  #/etc/elasticsearch/elasticsearch.yml
     owner: ubuntu
     group: ubuntu
@@ -36,7 +36,7 @@
 #   with_items: "{{ templs }}"
 #   notify: Restart scylla
 
-
+#/home/ubuntu/roletool1/roletool/templates/
 
 
 
