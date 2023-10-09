@@ -7,8 +7,19 @@
     group: ubuntu
     mode: '0644'
   become: true
-  notify:
-    - Reload systemd
+#  notify:
+#    - Reload systemd
+
+- name: Enable ScyllaDB Server service
+  systemd:
+    name: scylla-server
+    enabled: yes
+
+- name: Start ScyllaDB Service
+  systemd:
+     name: scylla-server
+     state: started
+    
 #  remote_src: true
 #    mode: '0644'
 #  with_items: "{{ templl }}"
