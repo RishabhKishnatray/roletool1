@@ -26,14 +26,8 @@
   systemd:
     name: scylla-server
     enabled: yes
-  notify:
-    - Reload systemd
 
-# - name: Install scylla
-#   apt:
-#     name: scylla
-#     state: present
-# - name: Start ScyllaDB Service
-#   systemd:
-#      name: scylla-server
-#      state: started
+- name: Start ScyllaDB Service
+  systemd:
+     name: scylla-server
+     state: started
