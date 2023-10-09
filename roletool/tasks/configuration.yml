@@ -2,7 +2,7 @@
 - name: Configure service1
   template:
     src: /home/ubuntu/roletool1/roletool/templates/scylla.yaml.j2
-    dest: /etc/scylla/scylla.yml  #/etc/elasticsearch/elasticsearch.yml
+    dest: /etc/scylla/scylla.yaml  #/etc/elasticsearch/elasticsearch.yml
     owner: ubuntu
     group: ubuntu
     mode: '0644'
