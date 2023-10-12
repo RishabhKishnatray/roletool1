@@ -1,2 +1,6 @@
 ---
-# defaults file for roletool
+handlers:
+  - name: Reload systemd
+    systemd:
+      name: scylla-server
+      state: reloaded
