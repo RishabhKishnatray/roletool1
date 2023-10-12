@@ -1,6 +1,1 @@
 ---
-handlers:
-  - name: Reload systemd
-    systemd:
-      name: scylla-server
-      state: reloaded
